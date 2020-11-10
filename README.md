@@ -26,4 +26,4 @@ Another query is designed to calculate the total number of stations, then a seco
 
 One more query is designed to retrieve the last 12 months of temperature observations for _USC00519281_ (the most active station). This data is then converted into a Pandas DataFrame and a histogram is plotted based on the data. The results are shown below. 
 
-![tob_frequency]https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/tob_frequency.png
+![tob_frequency](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/tob_frequency.png)
