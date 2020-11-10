@@ -1,6 +1,7 @@
 # SQLAlchemy Homework - Surfs Up!
 
 ## Background ## 
+A long holiday vacation in Honolulu, HI awaits and there is plenty of planning to do. To help with trip planning, some climate analysis on the area needs to be done. 
 
 ## Table of Contents ## 
 * [Climate Analysis and Exploration](#climate-analysis-and-exploration)
