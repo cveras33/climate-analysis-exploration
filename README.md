@@ -48,3 +48,7 @@ A Flask API is designed based on the queries that have just been developed for t
 * `/api/v1.0/<start>` 
 
 * `/api/v1.0/<start>/<end>`
+
+### Status ###
+
+Project is: *in progress*
