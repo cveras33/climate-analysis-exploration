@@ -27,3 +27,24 @@ Another query is designed to calculate the total number of stations, then a seco
 One more query is designed to retrieve the last 12 months of temperature observations for _USC00519281_ (the most active station). This data is then converted into a Pandas DataFrame and a histogram is plotted based on the data. The results are shown below. 
 
 ![tob_frequency](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/tob_frequency.png)
+
+## Climate App ## 
+A Flask API is designed based on the queries that have just been developed for the initial analysis. 
+
+#### Routes #### 
+* `/`
+ * The home page, which lists all other available routes.
+
+* `/api/v1.0/precipitation`
+ * Using the query from the [Precipitation Analysis](#precipitation-analysis) section, the query results are converted to a dictionary using `date` as the key and `prcp` as the value. 
+ * The results are returned in a JSON representation of the dictionary. 
+
+* `/api/v1.0/stations`
+ * A JSON formated list of all the stations in the dataset is returned. 
+ 
+* `/api/v1.0/tobs`
+ * Using the query from the [Station Analysis](#station-analysis) section, the query results are converted to a list and all the temperature observations at the most active station for the last year are returned. 
+ 
+* `/api/v1.0/<start>` 
+
+* `/api/v1.0/<start>/<end>`
