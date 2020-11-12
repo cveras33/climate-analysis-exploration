@@ -52,3 +52,8 @@ A Flask API is designed based on the queries that have just been developed for t
 ### Status ###
 
 Project is: *in progress*
+
+#### Contact 
+Chloe Veras  
+chloemveras@gmail.com  
+[LinkedIn](https://www.linkedin.com/in/chloeveras/)
