@@ -33,20 +33,16 @@ A Flask API is designed based on the queries that have just been developed for t
 
 #### Routes #### 
 * `/`
- * The home page, which lists all other available routes.
-
+  * The home page, which lists all other available routes.
 * `/api/v1.0/precipitation`
- * Using the query from the [Precipitation Analysis](#precipitation-analysis) section, the query results are converted to a dictionary using `date` as the key and `prcp` as the value. 
- * The results are returned in a JSON representation of the dictionary. 
-
+  * Using the query from the [Precipitation Analysis](#precipitation-analysis) section, the query results are converted to a dictionary using `date` as the key and `prcp` as the value. 
+  * The results are returned in a JSON representation of the dictionary. 
 * `/api/v1.0/stations`
- * A JSON formated list of all the stations in the dataset is returned. 
- 
+  * A JSON formated list of all the stations in the dataset is returned. 
 * `/api/v1.0/tobs`
- * Using the query from the [Station Analysis](#station-analysis) section, the query results are converted to a list and all the temperature observations at the most active station for the last year are returned. 
- 
+  * Using the query from the [Station Analysis](#station-analysis) section, the query results are converted to a list and all the temperature observations at the most active station for the last year are returned. 
 * `/api/v1.0/<start>` 
-
+  * 
 * `/api/v1.0/<start>/<end>`
 
 ### Status ###
