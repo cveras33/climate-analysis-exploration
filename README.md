@@ -8,7 +8,7 @@ A long holiday vacation in Honolulu, HI awaits and there is plenty of planning t
   * [Precipitation Analysis](#precipitation-analysis)
   * [Station Analysis](#station-analysis)
 * [Climate App](#climate-app)
-* [Bonus: Other Recommended Analysis](#bonus-other-recommended-analysis)
+* [Bonus](#bonus)
   * [Temperature Analysis I](#temperature-analysis-i)
   * [Temperature Analysis II](#temperature-analysis-ii)
   * [Daily Temperature Average](#daily-temperature-average)
@@ -56,6 +56,30 @@ A Flask API is designed based on the queries that have just been developed for t
   * Using a query from the [Station Analysis](#station-analysis) section to retrieve minimum, maximum and average temperatures, a filter is added to retrieve dates from a starting date provided by the user, to the end of the data set. 
 * `/api/v1.0/<start>/<end>`
   * Using the same query as mentioned above, this route retrieves the minimum, maximum and average temperatures from a start date to an end date, both provided by the user. 
+  
+## Bonus ## 
+
+### Temperature Analysis I ###
+
+Hawaii is reputed to enjoy mild weather all year. Before choosing a time to travel there, an analysis on whether the temperatures in the month of June vesus the month of December have any meaningful statistical difference. The average temperature for each station was calculated for the months of June and December, and those dataframes can be seen below. 
+
+The averages for June: 
+![june](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/june_averages.png)
+
+The averages for December: 
+![december](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/december_averages.png)
+
+Before running any sort of statistical tests, it was determined that an unpaired t-test would be the most appropriate since the temperatures in June are not dependent on the temperatures in December and vice versa. 
+
+After running an independent t-test on the data, it is able to be determined that there is a meaningful statistical difference between temperatures in June and temperatures in December in Hawaii because the p-value is 0.0003657335214469917, which is less than 0.05. 
+
+### Temperature Analysis II ### 
+
+For the second temperature analysis, the `calc_temps` function is used to calculate the min, avg, and max temperatures for a 3-10 day trip using the matching dates from the most recent year. Our trip will be taking place from November 11, 2016 to November 18, 2016 (7 day trip). 
+
+Below you can see a bar chart where the min, avg, and max are plotted, using the average temperature as the height of the bar, and the peak-to-peak (max - min) value as the y error bar. 
+
+![trip_avg_temp](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/trip_avg_temp.png)
 
 ### Status ###
 
