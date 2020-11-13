@@ -27,8 +27,8 @@ def home_page():
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
-        #f"/api/v1.0/<start><br/>"
-        #f"/api/v1.0/<start>/<end><br/>"
+        f"/api/v1.0/<start><br/>"
+        f"/api/v1.0/<start>/<end><br/>"
     )
 
 @app.route("/api/v1.0/precipitation")
@@ -50,9 +50,15 @@ def precipitation():
 
     session.close()
 
-    date_precip_dict = dict(results)
+    prcp_data = []
+    
+    for result in results:
+        row = {}
+        row["date"] = results[0]
+        row["prcp"] = results[1]
+        prcp_data.append(row)
 
-    return jsonify(date_precip_dict)
+    return jsonify(prcp_data)
 
 @app.route("/api/v1.0/stations")
 def stations():
@@ -95,39 +101,52 @@ def tobs():
 
     session.close()
 
-    tobs_list = list(np.ravel(results))
+    #tobs_list = list(np.ravel(results))
 
-    return jsonify(tobs_list)
+    tobs_data = []
+
+    for result in results:
+        row = {}
+        row["date"] = results[0]
+        row["tobs"] = results[1]
+        tobs_data.append(row)
+
+    return jsonify(tobs_data)
 
 
-#@app.route("/api/v1.0/<start>")
-#def start():
+@app.route("/api/v1.0/<start>")
+def start(start):
 
-#    session = Session(engine)
+    start = start
 
-#    results = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
-#        filter(Measurement.date >= start_date).all()
+    session = Session(engine)
+    
+    results = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
+        filter(Measurement.date >= start).all()
 
-#    session.close()
+    session.close()
 
-#    temp_start_list = list(np.ravel(results))
+    temp_start_list = list(np.ravel(results))
 
-#    return jsonify(temp_list)
+    return jsonify(temp_start_list)
 
-#@app.route("/api/v1.0/<start>/<end>")
-#def start_end(): 
+@app.route("/api/v1.0/<start>/<end>")
+def start_end(start, end):
 
-#    session = Session(engine)
+    start = start 
+    end = end 
 
-#    results = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
-#        filter(Measurement.date >= start_date).\
-#        filter(Measurement.date <= end_date).all()
+    session = Session(engine)
 
-#    session.close()
+    results = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
+        filter(Measurement.date >= start).\
+        filter(Measurement.date <= end).all()
 
-#    temp_start_end_list = list(np.ravel(results))
+    session.close()
 
-#    return jsonify(temp_start_end_list)
+    temp_start_end_list = list(np.ravel(results))
+
+    return jsonify(temp_start_end_list)
 
 if __name__ == '__main__':
     app.run(debug = True)
