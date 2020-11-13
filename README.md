@@ -93,7 +93,7 @@ The daily normals across all weather stations for all previous years with matchi
 
 ### Status ###
 
-Project is: *in progress*
+Project is: *complete*
 
 #### Contact 
 Chloe Veras  
