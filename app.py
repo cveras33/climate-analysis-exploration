@@ -116,6 +116,8 @@ def tobs():
 
 @app.route("/api/v1.0/<start>")
 def start(start):
+    """Returns a JSON list of min, max and avg temperature from a start date to the end of the dataset"""
+
 
     start = start
 
@@ -132,6 +134,8 @@ def start(start):
 
 @app.route("/api/v1.0/<start>/<end>")
 def start_end(start, end):
+    """Returns a JSON list of min, max and avg temperature from a start date to an end date"""
+
 
     start = start 
     end = end 
