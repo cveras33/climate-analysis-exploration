@@ -31,6 +31,15 @@ One more query is designed to retrieve the last 12 months of temperature observa
 ## Climate App ## 
 A Flask API is designed based on the queries that have just been developed for the initial analysis. 
 
+### Set Up ### 
+1. Navigate to the directory in which the `app.py` file lives on your local drive. 
+2. Run the `app.py` program by typing `python app.py` directly into your terminal. 
+3. Once running the program, several lines will print out in the terminal. Locate the line that begins with "Running on" followed by an `http://` link. 
+4. Copy and paste that link into your browser. 
+5. All possible routes are printed on the main pag which that link will take you directly to. 
+6. To navigate to the different routes, simply copy and paste the whole route as is to the end of the link in the address bar. 
+  - For both the start, and start/end routes you will have to provide a date. 
+
 #### Routes #### 
 * `/`
   * The home page, which lists all other available routes.
