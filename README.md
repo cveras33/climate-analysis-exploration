@@ -38,9 +38,9 @@ A Flask API is designed based on the queries that have just been developed for t
 4. Copy and paste that link into your browser. 
 5. All possible routes are printed on the main pag which that link will take you directly to. 
 6. To navigate to the different routes, simply copy and paste the whole route as is to the end of the link in the address bar. 
-  - For both the start, and start/end routes you will have to provide a date between January 1, 2010 - August 23, 2017. 
-  - The dates must be formatted as: `YYYY-MM-DD`. 
-  - For start/end, the start date will go first and the end date will be second, separated by a backslash. 
+    - For both the start, and start/end routes you will have to provide a date between January 1, 2010 - August 23, 2017. 
+    - The dates must be formatted as: `YYYY-MM-DD`. 
+    - For start/end, the start date will go first and the end date will be second, separated by a backslash. 
 
 #### Routes #### 
 * `/`
