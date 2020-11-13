@@ -42,8 +42,9 @@ A Flask API is designed based on the queries that have just been developed for t
 * `/api/v1.0/tobs`
   * Using the query from the [Station Analysis](#station-analysis) section, the query results are converted to a list and all the temperature observations at the most active station for the last year are returned. 
 * `/api/v1.0/<start>` 
-  * 
+  * Using a query from the [Station Analysis](#station-analysis) section to retrieve minimum, maximum and average temperatures, a filter is added to retrieve dates from a starting date provided by the user, to the end of the data set. 
 * `/api/v1.0/<start>/<end>`
+  * Using the same query as mentioned above, this route retrieves the minimum, maximum and average temperatures from a start date to an end date, both provided by the user. 
 
 ### Status ###
 
