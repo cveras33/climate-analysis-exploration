@@ -64,9 +64,13 @@ A Flask API is designed based on the queries that have just been developed for t
 Hawaii is reputed to enjoy mild weather all year. Before choosing a time to travel there, an analysis on whether the temperatures in the month of June vesus the month of December have any meaningful statistical difference. The average temperature for each station was calculated for the months of June and December, and those dataframes can be seen below. 
 
 The averages for June: 
+
+
 ![june](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/june_averages.png)
 
 The averages for December: 
+
+
 ![december](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/december_averages.png)
 
 Before running any sort of statistical tests, it was determined that an unpaired t-test would be the most appropriate since the temperatures in June are not dependent on the temperatures in December and vice versa. 
@@ -80,6 +84,12 @@ For the second temperature analysis, the `calc_temps` function is used to calcul
 Below you can see a bar chart where the min, avg, and max are plotted, using the average temperature as the height of the bar, and the peak-to-peak (max - min) value as the y error bar. 
 
 ![trip_avg_temp](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/trip_avg_temp.png)
+
+### Daily Temperature Average ### 
+
+The daily normals across all weather stations for all previous years with matching month and day are calculated using the function `daily_normals`. A visualization of this data is provided below in the area plot.  
+
+![daily](https://github.com/cveras33/sqlalchemy-challenge/blob/main/Images/daily_temp_avg.png)
 
 ### Status ###
 
